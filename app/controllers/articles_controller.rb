@@ -1,6 +1,5 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-  before_action :require_same_user
 
   # GET /articles
   # GET /articles.json
@@ -73,10 +72,4 @@ class ArticlesController < ApplicationController
       params.require(:article).permit(:title, :body, :user_id)
     end
 
-    def require_same_user
-      if !logged_in?
-        flash.notice = "You must be logged in to perform that action"
-        redirect_back(fallback_location: login_path)
-      end
-    end
 end

@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   def index
     #@articles = Article.all
-    @articles = Article.page(params[:page])
+    @articles = current_user.articles.page(params[:page])
   end
 
   # GET /articles/1
@@ -67,7 +67,7 @@ class ArticlesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_article
-      @article = Article.find(params[:id])
+      @article = current_user.articles.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

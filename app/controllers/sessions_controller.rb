@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
+
  def new
-   
+
  end
 
   def create
@@ -18,7 +19,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:chef_id] = nil
+    session[:user_id] = nil
     #flash[:success] = "You are logged out"
     flash.notice = 'You are logged out'
     redirect_to root_path

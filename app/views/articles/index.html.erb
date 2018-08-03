@@ -1,5 +1,11 @@
 <!--<p id="notice"><%= notice %></p>-->
 
+<% if current_user %>
+  <%= "Logged in as #{current_user.email}" %>
+<% else %>
+  <%= "You are not logged in" %>
+<% end %>
+
 <h1>Articles</h1>
 
 <table>

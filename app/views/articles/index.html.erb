@@ -18,6 +18,7 @@
   </thead>
 
   <tbody>
+    <%= paginate @articles %>
     <% @articles.each do |article| %>
       <tr>
         <td><%= article.title %></td>

@@ -9,7 +9,7 @@
   <br/>
   <% @articles.each do |article| %>
   <div class="row">
-    <div class="col-md-6 offset-md-3 well">
+    <div class="col-md-6 offset-md-3">
       <div class="card card-block bg-faded">
         <p><%= article.title %></p>
         <p><%= truncate(article.body, length: 150) %> <%= link_to 'Show More', article %></p>

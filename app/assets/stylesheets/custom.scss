@@ -12,6 +12,10 @@ h3 {
   padding-bottom: 20px;
 }
 
+p {
+  padding: 10px;
+}
+
 .signin {
   width: 100%;
   max-width: 330px;
@@ -47,6 +51,7 @@ color: #fff;
 .main-container {
   padding-top: 90px;
   padding-left: 40px;
+  padding-bottom: 70px;
 }
 
 .footer {
@@ -61,4 +66,8 @@ color: #fff;
 
 .footer-content {
   color: #000;
+}
+
+.article-actions {
+  padding: 10px;
 }

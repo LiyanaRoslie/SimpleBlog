@@ -4,15 +4,20 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div id="navbarNavDropdown" class="navbar-collapse collapse">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Your favourite online diary platform</a>
-            </li>
-        </ul>
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <%= link_to 'Log Out', logout_path, method: :delete, :class => 'nav-link' %>
-            </li>
-        </ul>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Your favourite online diary platform</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <% if current_user %>
+            <%= link_to("You are currently logged in as #{current_user.email}", "#", :class => 'nav-link') %>
+          <% end %>
+        </li>
+        <li class="nav-item active">
+          <%= link_to 'Log Out', logout_path, method: :delete, :class => 'nav-link' %>
+        </li>
+      </ul>
     </div>
 </nav>

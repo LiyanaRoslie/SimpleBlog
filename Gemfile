@@ -40,6 +40,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'email_validator'
 # Displays pagination
 gem 'kaminari', '~> 1.1.1'
+# Pagination themes
+gem 'bootstrap4-kaminari-views'
 # Front-end library component
 gem 'bootstrap', '~> 4.1.3'
 # Bootstrap is dependent on JQuery

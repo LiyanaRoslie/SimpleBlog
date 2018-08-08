@@ -5,4 +5,6 @@ class Article < ApplicationRecord
   belongs_to :user
 
   paginates_per 5
+
+  default_scope -> { order(updated_at: :desc) } 
 end

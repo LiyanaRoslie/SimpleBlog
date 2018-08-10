@@ -1,4 +1,5 @@
 module ApplicationHelper
+  
   def markdown(content)
     @markdown ||= Redcarpet::Markdown.new(Redcarpet::Render::HTML, {
       autolink: true,
@@ -19,4 +20,5 @@ module ApplicationHelper
     })
     @markdown.render(content).html_safe
   end
+
 end

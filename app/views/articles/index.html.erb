@@ -12,7 +12,7 @@
     <div class="col-md-6 offset-md-3">
       <div class="card card-block bg-faded">
         <p><%= article.title %></p>
-        <p><%= truncate(article.body, length: 150) %> <%= link_to 'Show More', article %></p>
+        <p><%= truncate( strip_tags( markdown(article.body) ), length: 150) %><%= link_to 'Show More', article %></p>
         <div class="article-actions small text-muted">Updated <%= time_ago_in_words(article.updated_at) %> ago <br/> Created <%= time_ago_in_words(article.created_at) %> ago </div>
         <div class = "article-actions"><%= link_to 'Edit', edit_article_path(article), :class => 'btn btn-primary btn-sm submit' %>  <%= link_to 'Destroy', article, method: :delete, :class => 'btn btn-primary btn-sm submit', data: { confirm: 'Are you sure?' } %></div>
       </div>

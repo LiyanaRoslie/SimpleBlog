@@ -4,6 +4,7 @@ module ApplicationHelper
       autolink: true,
       space_after_headers: true,
       fenced_code_blocks: true,
+      lax_html_blocks: true,
       filter_html: true,
       hard_wrap: false,
       strikethrough: true,
